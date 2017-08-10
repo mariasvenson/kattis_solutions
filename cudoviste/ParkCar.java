@@ -16,20 +16,53 @@ public class ParkCar{
         int rows = Integer.parseInt(rowsAndCol[0]); 
         int col = Integer.parseInt(rowsAndCol[1]);
         int numIterationCol = col-1;
-
-        int[] firstArray; 
-        int[] secondArray;
-
-        while (sc.hasNextLine()) {
+        //System.out.println(numIterationCol);
+       
         String firstRow = sc.nextLine();
         String secondRow = sc.nextLine();
-        String[] firstrowChar = firstRow.split("");
-        String[] secondrowChar = secondRow.split("");
-        for(int j=0; j<(numIterationCol); j++){
-            for(int i=0; i<2; i++){
-                System.out.println(firstrowChar[i]);
+        //System.out.println(firstRow + "first");
+        //System.out.println(secondRow + "second" );
+        String[] firstRowChar = firstRow.split("");
+        String[] secondRowChar = secondRow.split("");
+
+        while (sc.hasNextLine()) {
+        for(int i=0; i<numIterationCol; i++){
+        
+        if ((firstRowChar[i] == ".") && (firstRowChar[i+1] == ".") && (secondRowChar[i] == ".") && (secondRowChar[i+1] == ".")){
+            countParkingSlots("0");
+        
+        } else if (firstRowChar[i] == "X"){
+
+        
+        } else{
+            //System.out.println("NO!!!!");
         }
+
+
+        firstRow = secondRow;
+        secondRow = sc.nextLine();
+        secondRowChar = secondRow.split("");
+
+        //for(int j=0; j<(numIterationCol); j++){
+        //    for(int i=0; i<2; i++){
+        //        System.out.println(firstrowChar[i]);
+        //}*/
       }
     }
   }
+
+    public static void countParkingSlots(String whatToDo) {
+        List<Integer> countParkingSlot = Collections.nCopies(4, 0);
+        System.out.println(countParkingSlot.get(5));
+        switch(whatToDo){
+                    case "0":    
+                        break;
+                    case "1":
+                        break;
+                    case "2":              
+                        break;
+                    default: 
+                        break;
+      }
+}
 }
