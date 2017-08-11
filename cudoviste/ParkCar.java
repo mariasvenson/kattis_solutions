@@ -6,6 +6,29 @@ import java.util.Scanner;
 
 public class ParkCar{
 
+    public class ParkingScore{
+
+        public int free_slots ;
+        public int one_car;
+        public int two_cars;
+        public int three_cars; 
+        public int four_cars; 
+
+    }
+
+    public ParkCar(){
+        free_slots = 0; 
+        one_car = 0; 
+        two_cars = 0; 
+        three_cars = 0; 
+        four_cars = 0; 
+    }
+
+    public static void print(){
+        system.out.println(free_slots + "\n" + one_car + "\n" + two_cars + "\n" + three_cars + "\n" + four_cars);
+
+    }
+
     public static void main(String[] args) {
         //Scanner sc = new Scanner(System.in);
         String input = "4 4\n#..#\n..X.\n..X.\n#XX#\n"; 
@@ -16,53 +39,34 @@ public class ParkCar{
         int rows = Integer.parseInt(rowsAndCol[0]); 
         int col = Integer.parseInt(rowsAndCol[1]);
         int numIterationCol = col-1;
-        //System.out.println(numIterationCol);
        
         String firstRow = sc.nextLine();
         String secondRow = sc.nextLine();
-        //System.out.println(firstRow + "first");
-        //System.out.println(secondRow + "second" );
         String[] firstRowChar = firstRow.split("");
         String[] secondRowChar = secondRow.split("");
 
+        ParkingScore score = new ParkingScore();
+
         while (sc.hasNextLine()) {
         for(int i=0; i<numIterationCol; i++){
-        
-        if ((firstRowChar[i] == ".") && (firstRowChar[i+1] == ".") && (secondRowChar[i] == ".") && (secondRowChar[i+1] == ".")){
-            countParkingSlots("0");
-        
-        } else if (firstRowChar[i] == "X"){
 
+        Int freeParkingSlots = nrFreeParkingslots((firstRowChar[i], (firstRowChar[i+1], (secondRowChar[i], (firstRowChar[i+1]);
         
-        } else{
-            //System.out.println("NO!!!!");
+
         }
-
 
         firstRow = secondRow;
         secondRow = sc.nextLine();
         secondRowChar = secondRow.split("");
+      
+        }
 
-        //for(int j=0; j<(numIterationCol); j++){
-        //    for(int i=0; i<2; i++){
-        //        System.out.println(firstrowChar[i]);
-        //}*/
-      }
+
+        score.print();
+    }    
+
+    public static int nrFreeParkingslots(x1, x2, y1, y2){
+
+
     }
-  }
-
-    public static void countParkingSlots(String whatToDo) {
-        List<Integer> countParkingSlot = Collections.nCopies(4, 0);
-        System.out.println(countParkingSlot.get(5));
-        switch(whatToDo){
-                    case "0":    
-                        break;
-                    case "1":
-                        break;
-                    case "2":              
-                        break;
-                    default: 
-                        break;
-      }
-}
 }
