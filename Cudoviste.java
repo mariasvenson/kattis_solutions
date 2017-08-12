@@ -4,7 +4,7 @@ import java.text.*;
 import java.util.Scanner;
 
 
-public class ParkCar{
+public class Cudoviste{
 
     public static class ParkingScore{
 
