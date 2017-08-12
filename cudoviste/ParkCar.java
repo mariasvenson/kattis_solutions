@@ -33,12 +33,12 @@ public class ParkCar{
 }
 
     public static void main(String[] args) {      
-        //Read input
         //String input = "4 5\n..XX.\n.#XX.\n..#..\n.....\n"; 
         //Scanner sc = new Scanner(input);
         Scanner sc = new Scanner(System.in);        
         String str = sc.nextLine();
         String[] rowsAndCol = str.split("\\s+");
+        
         //first time
         String bottomLine = ""; 
         int rows = Integer.parseInt(rowsAndCol[0]); 
@@ -87,13 +87,11 @@ public class ParkCar{
         score.print();
     }    
 
-    //returning number of free parkinslots 
+    //returning number of free parking slots 
     public static int nrFreeParkingslots(String[] firstAndSecondRow){   
-        //System.out.println(firstAndSecondRow[0] + firstAndSecondRow[1] + firstAndSecondRow[2] + firstAndSecondRow[3]);
         int nrCars = 0; 
         int nrHouse = 0; 
         for(int i = 0; i < 4; i++){
-            //System.out.println(firstAndSecondRow[i]);
             switch(firstAndSecondRow[i]){
                     case "X": 
                         nrCars += 1;   
