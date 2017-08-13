@@ -3,3 +3,4 @@
 Link to the description of the problems: 
 * [Cudoviste](https://open.kattis.com/problems/cudoviste)
 * [Doorman](https://open.kattis.com/problems/doorman)
+* [Phone List](https://open.kattis.com/problems/phonelist)
