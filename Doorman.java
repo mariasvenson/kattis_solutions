@@ -25,7 +25,7 @@ public class Doorman{
     			break;
     		}
     		if(queueList[i+1].equals("M") ){
-    			tmp = queueList[i];
+    		    tmp = queueList[i];
     			queueList[i] = queueList[i+1];
     			queueList[i+1] = tmp; 
     		}else{
@@ -40,24 +40,26 @@ public class Doorman{
     		if(queueList[i+1].equals("W")){
     			tmp = queueList[i];
     			queueList[i] = queueList[i+1];
-   			queueList[i+1] = tmp; 
+   			    queueList[i+1] = tmp; 
    		}else{
    			break; 
     		}
     	}
-    		switch(queueList[i]){
-    			case "W":
-    				count--; 
-    				countPeopleIn++; 
-    				break; 
-    			case "M":
-    				count++; 
-    				countPeopleIn++; 
-    				break; 
-    			default: 
-    				break; 
-    		}
-    	}
+    		
+        switch(queueList[i]){
+    		case "W":
+    			count--; 
+    			countPeopleIn++; 
+    			break; 
+    		case "M":
+				count++; 
+                countPeopleIn++; 
+    			break; 
+    		default: 
+    			break; 
+		}
+    }
+    
     System.out.println(countPeopleIn);
     
     }
