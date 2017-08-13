@@ -6,8 +6,8 @@ import java.util.Scanner;
 
 public class Doorman{
 
-	public static void main(String[] args) {  
-   	Scanner sc = new Scanner(System.in);           
+    public static void main(String[] args) {  
+    Scanner sc = new Scanner(System.in);           
     String str = sc.nextLine();
     int maxDiff = Integer.parseInt(str);
     
@@ -40,9 +40,9 @@ public class Doorman{
     		if(queueList[i+1].equals("W")){
     			tmp = queueList[i];
     			queueList[i] = queueList[i+1];
-   				queueList[i+1] = tmp; 
-   			}else{
-   				break; 
+   			queueList[i+1] = tmp; 
+   		}else{
+   			break; 
     		}
     	}
     		switch(queueList[i]){
