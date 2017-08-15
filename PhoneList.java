@@ -2,26 +2,45 @@ import java.io.*;
 import java.util.*;
 import java.text.*;
 import java.util.Scanner;
+import java.util.Arrays;
+import java.util.stream.IntStream;
+import java.util.Comparator;
 
 
 public class PhoneList{
 	public static void main(String[] args) {  
 
 	Scanner sc = new Scanner(System.in);
-	//String input = "2\n3\n911\n97625999\n91125426\n5\n113\n12340\n123440\n12345\n98346\n";
-	Scanner sc = new Scanner(input);
-    String str = sc.nextLine();
-    int numTimes = Integer.parseInt(str);
-
+    int numTimes = Integer.parseInt(sc.nextLine());
+	    
     for(int i = 0; i < numTimes; i++){
-    	int nrNumbers = sc.nextLine();
+    	int nrNumbers = Integer.parseInt(sc.nextLine());
+    	String[] allNumbers = new String[nrNumbers]; 
     	for(int j = 0; j < nrNumbers; j++){
-    		String[] allNumbers = new String []
-
+    		String phoneNr = sc.nextLine(); 
+    		allNumbers[j] = phoneNr;
     	}
-    }
 
+		Arrays.sort(allNumbers);
+		boolean nrFound = true; 
+		
+		for(int k = 1; k < allNumbers.length; k++){
+	 			if(allNumbers[k].startsWith(allNumbers[k - 1])){
+		    		nrFound = false;
+		    		break;    	
+		   	}
+	    }
+	    
+		if(nrFound){
+	    	System.out.println("YES");
+	    }else{
+	    	System.out.println("NO");
+	    }
+
+	}
 	
 	}
 
 }
+
+
