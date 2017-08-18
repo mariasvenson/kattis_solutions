@@ -60,23 +60,21 @@ public class VirtualFriends{
             
             while(queue.isEmpty() == false){
                 Node currentNode = queue.remove(0);
-                if(visited.contains(currentNode.name)){ // n
+                if(visited.contains(currentNode.name)){
                     continue; 
                 }
                 count++;
                 visited.add(currentNode.name);
-                for(Node n : currentNode.neighbours){ // n
-                    if(visited.contains(n.name)){ // n
+                for(Node n : currentNode.neighbours){
+                    if(visited.contains(n.name)){ 
                     }else{
                         queue.add(n);
                     }
                 }   
-            
             }
             System.out.println(count);
 
         }
-
     }
 }
 
